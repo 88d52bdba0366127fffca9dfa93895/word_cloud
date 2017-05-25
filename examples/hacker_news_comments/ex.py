@@ -7,6 +7,7 @@ from spacy.en import English
 from nltk.corpus import stopwords
 from wordcloud import WordCloud
 
+# https://zenodo.org/record/45901/files/hacker_news_comments.csv
 df = pd.read_csv('hacker_news_comments.csv')
 df['story_time'] = pd.to_datetime(df['story_time'], unit='s')
 df['year'] = df['story_time'].apply(lambda x: x.year)
